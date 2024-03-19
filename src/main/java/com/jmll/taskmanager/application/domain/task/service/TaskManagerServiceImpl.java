@@ -13,7 +13,6 @@ import java.util.List;
 @Service
 public class TaskManagerServiceImpl implements TaskManagerService {
 
-    private static final Boolean IS_VALID_USER = Boolean.TRUE;
     private final TaskPersistencePort taskPersistencePort;
 
     @Override

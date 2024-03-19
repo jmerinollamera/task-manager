@@ -25,7 +25,7 @@ public class TaskController {
         return taskManagerService.getAllTasks();
     }
 
-    @PostMapping("/implemted/{taskId}")
+    @PostMapping("/implemented/{taskId}")
     public Task setTaskAsImplemented(@PathVariable("taskId") Long taskId) {
         return taskManagerService.setTaskAsImplemented(taskId);
     }
