@@ -1,4 +1,4 @@
-package com.jmll.taskmanager.application.domain.task.service;
+package com.jmll.taskmanager.application.domain.task.service.exception;
 
 public class DuplicateTaskException extends RuntimeException {
     public DuplicateTaskException(Long taskId) {

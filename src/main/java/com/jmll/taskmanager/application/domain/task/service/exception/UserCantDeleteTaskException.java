@@ -1,4 +1,4 @@
-package com.jmll.taskmanager.application.domain.task.service;
+package com.jmll.taskmanager.application.domain.task.service.exception;
 
 public class UserCantDeleteTaskException extends RuntimeException {
     public UserCantDeleteTaskException(Long taskId) {

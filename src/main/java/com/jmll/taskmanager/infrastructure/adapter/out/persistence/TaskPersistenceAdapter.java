@@ -3,7 +3,9 @@ package com.jmll.taskmanager.infrastructure.adapter.out.persistence;
 import com.jmll.taskmanager.application.domain.task.model.Task;
 import com.jmll.taskmanager.application.port.out.TaskPersistencePort;
 import lombok.AllArgsConstructor;
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,9 +26,17 @@ public class TaskPersistenceAdapter implements TaskPersistencePort {
     }
 
     @Override
+    @Transactional
     public Task saveTask(Task task) {
         TaskJpaEntity taskJpaEntity = taskMapper.taskToTaskJpaEntity(task);
         taskJpaEntity = taskRepository.save(taskJpaEntity);
+        if (CollectionUtils.isNotEmpty(taskJpaEntity.getSubtasks())) {
+            TaskJpaEntity finalTaskJpaEntity = taskJpaEntity;
+            taskJpaEntity.getSubtasks().forEach(subTask -> {
+                subTask.setParentTask(finalTaskJpaEntity);
+                taskRepository.save(subTask);
+            });
+        }
         return taskMapper.taskJpaEntityToTask(taskJpaEntity);
     }
 

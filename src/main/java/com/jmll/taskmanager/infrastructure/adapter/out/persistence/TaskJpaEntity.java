@@ -19,9 +19,15 @@ public class TaskJpaEntity {
     @Id
     @GeneratedValue
     private Long id;
+    @Column(nullable = false)
     private String description;
+    @Column(nullable = false)
     private LocalDate expiryDate;
+    @Enumerated(EnumType.STRING)
     private TaskStatus status;
-    @OneToMany
-    private List<TaskJpaEntity> tasks;
+    @OneToMany(mappedBy = "parentTask", cascade = CascadeType.ALL)
+    private List<TaskJpaEntity> subtasks;
+    @ManyToOne
+    @JoinColumn(name = "parent_task_id")
+    private TaskJpaEntity parentTask;
 }

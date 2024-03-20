@@ -2,6 +2,8 @@ package com.jmll.taskmanager.application.domain.task.service;
 
 import com.jmll.taskmanager.application.domain.task.model.Task;
 import com.jmll.taskmanager.application.domain.task.model.TaskStatus;
+import com.jmll.taskmanager.application.domain.task.service.exception.DuplicateTaskException;
+import com.jmll.taskmanager.application.domain.task.service.exception.UserCantDeleteTaskException;
 import com.jmll.taskmanager.application.port.out.TaskPersistencePort;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -93,7 +95,7 @@ class TaskManagerServiceImplTest {
         List<Task> tasks = new ArrayList<>();
         tasks.add(subtask1);
         tasks.add(subtask2);
-        parentTask.setTasks(tasks);
+        parentTask.setSubtasks(tasks);
 
         when(taskPersistencePort.getTask(TASK_DEFAULT_ID)).thenReturn(parentTask);
         when(taskPersistencePort.saveTask(any(Task.class))).thenAnswer(invocation -> invocation.getArgument(0));
@@ -102,7 +104,7 @@ class TaskManagerServiceImplTest {
 
         assertNotNull(resultTask);
         assertEquals(TaskStatus.IMPLEMENTED, resultTask.getStatus());
-        assertTrue(parentTask.getTasks().stream().allMatch(t -> t.getStatus() == TaskStatus.IMPLEMENTED));
+        assertTrue(parentTask.getSubtasks().stream().allMatch(t -> t.getStatus() == TaskStatus.IMPLEMENTED));
     }
 
     @Test
