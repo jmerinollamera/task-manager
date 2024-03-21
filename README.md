@@ -5,9 +5,11 @@ delete tasks.
 Each task can have a list of subtasks.
 Each subtasks can only have one parent task.
 
+It is not implemented to add a subtask to a task. All the subtasks must be provided when the task is created.
+
 Also, in the project, there is implemented a **basic authentication** and authorization using Spring Boot Security.
 
-## Basic logic implemented
+## Basic logic required
 
 * **Create task:** with fields name, description, expiry date, state
 
@@ -62,7 +64,7 @@ Also, in the project, there is implemented a **basic authentication** and author
     * If a parent task is marked as **IMPLEMENTED**, all the subtasks must be set as **IMPLEMENTED**.
     * If all the subtasks are in state **IMPLEMENTED**, the parent task must be set as **IMPLEMENTED**.
 * **Delete task:**
-    * Only **Authorized** users can delete tasks.
+    * Only **Authorized** users can delete tasks (user with the role ADMIN).
     * If a parent task is deleted, all the subtasks must be deleted.
 
 ## Technical solution
@@ -124,8 +126,28 @@ interfaces defined in the domain package.
 * **Configuration:** the collection has two configurations:
     * Authorization: can be used to set the user and password to send for authentication and authorization.
 
-    <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Authorization_screen.png">
+      <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Authorization_screen.png">
 
     * Variables: it is set the variable url-task-manager to point to the url and port set for the application.
 
       <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Variables_screen.png">
+
+  There are two users defined to test the project:
+    * Basic user:
+        * Username: user
+        * Password: basic
+    * Admin user (can delete task):
+        * Username: jorge
+        * Password: merino
+
+* **Requests:** there are six request for test:
+
+    <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/test_requests.png">
+
+    * **Add task (POST request):** add task without subtasks. Status PENDING by default.
+    * **Add task with subtasks (POST request):** add a task with a list of subtasks
+    * **Get all (GET request):** retrieve all the tasks in the database
+    * **Set task as implemented by id (POST request):** set task as IMPLEMENTED
+    * **Set task as Pending by id (POST request):** (NOT REQUIRED in the cases definition) but useful to test the
+      project.
+    * **Delete task by id (DELETE request):** delete a task only if the user is ADMIN role 
