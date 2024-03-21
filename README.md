@@ -122,10 +122,11 @@ interfaces defined in the domain package.
       <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/select_collection.png">
 
 * **Configuration:** the collection has two configurations:
-    * Authorization: can be used to set the user and password to send for authentication and authorization.
+    * Authorization: can be used to set the user and password to send for authentication and authorization:
 
-    <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Authorization_screen.png">
+      <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Authorization_screen.png">
 
     * Variables: it is set the variable url-task-manager to point to the url and port set for the application.
 
       <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Variables_screen.png">
+      
