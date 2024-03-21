@@ -110,11 +110,17 @@ interfaces defined in the domain package.
   located in the project directory.
 * **Import collection:**
     * Select File-import in Postman menu:
+      
       <img width=60% src="https://github.com/jmerinollamera/task-managerr/blob/main/img/import_in_postman.png">
+      
     * Select Files
+      
       <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/select_files.png">
+
     * Select collections
+      
       <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/select_collection.png">
+      
 * **Configuration:** the collection has two configurations:
     * Authorization: can be used to set the user and password to send for authentication and authorization.
     * Variables: it is set the variable url-task-manager to point to the url and port set for the application.
