@@ -113,7 +113,7 @@ interfaces defined in the domain package.
 * **Import collection:**
     * Select File-import in Postman menu:
 
-      <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/import_in_postman.png">
+      <img width=40% src="https://github.com/jmerinollamera/task-manager/blob/main/img/import_in_postman.png">
 
     * Select Files
 
@@ -126,11 +126,11 @@ interfaces defined in the domain package.
 * **Configuration:** the collection has two configurations:
     * Authorization: can be used to set the user and password to send for authentication and authorization.
 
-      <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Authorization_screen.png">
+      <img width=100% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Authorization_screen.png">
 
     * Variables: it is set the variable url-task-manager to point to the url and port set for the application.
 
-      <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Variables_screen.png">
+      <img width=100% src="https://github.com/jmerinollamera/task-manager/blob/main/img/Variables_screen.png">
 
   There are two users defined to test the project:
     * Basic user:
