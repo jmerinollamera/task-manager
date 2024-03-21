@@ -8,10 +8,7 @@ spring:
     driverClassName: org.h2.Driver
   jpa:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
-  basic:
-    enabled: false
-management:
-  security:
-    enabled: false
+
+task-manager:
+  basic-user-pass: ${BASIC_USER_PASS:basic}
+  delete-user-pass: ${BASIC_USER_PASS:merino}
