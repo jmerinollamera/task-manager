@@ -59,8 +59,8 @@ Also, in the project, there is implemented a **basic authentication** and author
 ```
 
 * **Set task as implemented:**
-    * If a parent task is marked as **IMPLEMENTED**, all the subtasks must be marked as **IMPLEMENTED**.
-    * If all the subtasks are in state **IMPLEMENTED**, the parent task must be marked as **IMPLEMENTED**.
+    * If a parent task is marked as **IMPLEMENTED**, all the subtasks must be set as **IMPLEMENTED**.
+    * If all the subtasks are in state **IMPLEMENTED**, the parent task must be set as **IMPLEMENTED**.
 * **Delete task:**
     * Only **Authorized** users can delete tasks.
     * If a parent task is deleted, all the subtasks must be deleted.
