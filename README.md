@@ -111,7 +111,7 @@ interfaces defined in the domain package.
 * **Import collection:**
     * Select File-import in Postman menu:
       
-      <img width=60% src="https://github.com/jmerinollamera/task-managerr/blob/main/img/import_in_postman.png">
+      <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/import_in_postman.png">
       
     * Select Files
       
