@@ -102,10 +102,13 @@ interfaces defined in the domain package.
 ### Steps to download and run the project: ###
 
 * **Download:** the project from the public repository
+
   https://github.com/jmerinollamera/task-manager
 * **Compile and generate the .jar:** inside the task-manager project directory, execute:
+
   **mvn clean install**
 * **Execute project:** inside the task-manager project directory, execute:
+
   **java -jar target/task-manager-0.0.1-SNAPSHOT.jar**
 
 ### Test the project: ###
