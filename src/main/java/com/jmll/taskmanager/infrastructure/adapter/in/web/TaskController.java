@@ -1,8 +1,8 @@
 package com.jmll.taskmanager.infrastructure.adapter.in.web;
 
-import com.jmll.taskmanager.application.domain.task.model.Task;
-import com.jmll.taskmanager.application.domain.task.service.TaskManagerService;
-import com.jmll.taskmanager.application.domain.task.service.exception.UserCantDeleteTaskException;
+import com.jmll.taskmanager.domain.task.model.Task;
+import com.jmll.taskmanager.domain.task.service.TaskManagerService;
+import com.jmll.taskmanager.domain.task.service.exception.UserCantDeleteTaskException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

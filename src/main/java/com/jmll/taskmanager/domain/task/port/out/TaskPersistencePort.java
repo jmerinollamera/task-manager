@@ -1,6 +1,6 @@
-package com.jmll.taskmanager.application.port.out;
+package com.jmll.taskmanager.domain.task.port.out;
 
-import com.jmll.taskmanager.application.domain.task.model.Task;
+import com.jmll.taskmanager.domain.task.model.Task;
 
 import java.util.List;
 

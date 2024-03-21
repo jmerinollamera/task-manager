@@ -1,6 +1,6 @@
 package com.jmll.taskmanager.infrastructure.adapter.out.persistence;
 
-import com.jmll.taskmanager.application.domain.task.model.Task;
+import com.jmll.taskmanager.domain.task.model.Task;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

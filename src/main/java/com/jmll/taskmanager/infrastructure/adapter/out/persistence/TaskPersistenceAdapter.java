@@ -1,7 +1,7 @@
 package com.jmll.taskmanager.infrastructure.adapter.out.persistence;
 
-import com.jmll.taskmanager.application.domain.task.model.Task;
-import com.jmll.taskmanager.application.port.out.TaskPersistencePort;
+import com.jmll.taskmanager.domain.task.model.Task;
+import com.jmll.taskmanager.domain.task.port.out.TaskPersistencePort;
 import lombok.AllArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Service;

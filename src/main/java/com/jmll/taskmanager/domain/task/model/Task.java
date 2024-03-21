@@ -1,4 +1,4 @@
-package com.jmll.taskmanager.application.domain.task.model;
+package com.jmll.taskmanager.domain.task.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

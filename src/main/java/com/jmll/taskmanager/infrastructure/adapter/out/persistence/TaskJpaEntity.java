@@ -1,6 +1,6 @@
 package com.jmll.taskmanager.infrastructure.adapter.out.persistence;
 
-import com.jmll.taskmanager.application.domain.task.model.TaskStatus;
+import com.jmll.taskmanager.domain.task.model.TaskStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

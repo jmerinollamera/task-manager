@@ -1,10 +1,10 @@
-package com.jmll.taskmanager.application.domain.task.service;
+package com.jmll.taskmanager.domain.task.service;
 
-import com.jmll.taskmanager.application.domain.task.model.Task;
-import com.jmll.taskmanager.application.domain.task.model.TaskStatus;
-import com.jmll.taskmanager.application.domain.task.service.exception.DuplicateTaskException;
-import com.jmll.taskmanager.application.domain.task.service.exception.UserCantDeleteTaskException;
-import com.jmll.taskmanager.application.port.out.TaskPersistencePort;
+import com.jmll.taskmanager.domain.task.model.Task;
+import com.jmll.taskmanager.domain.task.model.TaskStatus;
+import com.jmll.taskmanager.domain.task.port.out.TaskPersistencePort;
+import com.jmll.taskmanager.domain.task.service.exception.DuplicateTaskException;
+import com.jmll.taskmanager.domain.task.service.exception.UserCantDeleteTaskException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

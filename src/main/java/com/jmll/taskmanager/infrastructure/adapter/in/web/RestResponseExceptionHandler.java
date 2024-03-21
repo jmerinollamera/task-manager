@@ -1,8 +1,8 @@
 package com.jmll.taskmanager.infrastructure.adapter.in.web;
 
-import com.jmll.taskmanager.application.domain.task.service.exception.DuplicateTaskException;
-import com.jmll.taskmanager.application.domain.task.service.exception.TaskNotFoundException;
-import com.jmll.taskmanager.application.domain.task.service.exception.UserCantDeleteTaskException;
+import com.jmll.taskmanager.domain.task.service.exception.DuplicateTaskException;
+import com.jmll.taskmanager.domain.task.service.exception.TaskNotFoundException;
+import com.jmll.taskmanager.domain.task.service.exception.UserCantDeleteTaskException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

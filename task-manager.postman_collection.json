@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "c6809273-157d-4ccd-af87-4652a2ded77f",
+		"name": "task-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29310547"
+	},
+	"item": [
+		{
+			"name": "Add task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Task without subtasks\",\n    \"expiryDate\": \"2024-04-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-task-manager}}",
+					"host": [
+						"{{url-task-manager}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add task with subtasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Task 1\",\n    \"expiryDate\": \"2024-06-30\",\n    \"subtasks\": [\n        {\n            \"description\": \"Subtask 1 of Task 1\",\n            \"expiryDate\": \"2024-06-01\"\n        },\n        {\n            \"description\": \"Subtask 2 of Task 1\",\n            \"expiryDate\": \"2024-06-05\"\n        },\n        {\n            \"description\": \"Subtask 3 of Task 1\",\n            \"expiryDate\": \"2024-06-20\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-task-manager}}",
+					"host": [
+						"{{url-task-manager}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-task-manager}}/all",
+					"host": [
+						"{{url-task-manager}}"
+					],
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set task Implemented by Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url-task-manager}}/implemented/1",
+					"host": [
+						"{{url-task-manager}}"
+					],
+					"path": [
+						"implemented",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set task Pending by Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url-task-manager}}/pending/3",
+					"host": [
+						"{{url-task-manager}}"
+					],
+					"path": [
+						"pending",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url-task-manager}}/1",
+					"host": [
+						"{{url-task-manager}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "merino",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "jorge",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url-task-manager",
+			"value": "localhost:8080/tasks",
+			"type": "string"
+		}
+	]
+}

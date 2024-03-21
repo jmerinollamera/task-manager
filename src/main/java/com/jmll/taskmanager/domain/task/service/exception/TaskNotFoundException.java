@@ -1,4 +1,4 @@
-package com.jmll.taskmanager.application.domain.task.service.exception;
+package com.jmll.taskmanager.domain.task.service.exception;
 
 public class TaskNotFoundException extends RuntimeException {
     public TaskNotFoundException(Long taskId) {
