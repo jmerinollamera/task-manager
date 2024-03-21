@@ -142,7 +142,7 @@ interfaces defined in the domain package.
 
 * **Requests:** there are six request for test:
 
-    <img width=60% src="https://github.com/jmerinollamera/task-manager/blob/main/img/test_requests.png">
+    <img width=40% src="https://github.com/jmerinollamera/task-manager/blob/main/img/test_requests.png">
 
     * **Add task (POST request):** add task without subtasks. Status PENDING by default.
     * **Add task with subtasks (POST request):** add a task with a list of subtasks
